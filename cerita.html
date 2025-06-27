@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Javala - Aplikasi Penerjemahan Cerita Rakyat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <!-- Bagian Logo -->
+    <div class="navbar-inner">
+      <div class="navbar-header">
+        <div class="navbar-logo">Javala</div>
+      </div>
+    </div>
+
+    <!-- Bagian Navigasi -->
+    <div class="navbar-nav-bg">
+      <div class="navbar-center">
+        <div class="navbar-container">
+          <a href="index.html">Beranda</a>
+          <a href="cerita.html">Cerita</a>
+          <a href="https://huggingface.co/spaces/naufalhm/folklore_translation_app">Terjemahan</a>
+          <a href="tentang.html">Tentang</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Terjemahan Cerita Rakyat</h1>
+
+    <!-- Filter Dropdown -->
+    <div class="filter-wrapper">
+      <select id="judul-cerita">
+        <option disabled selected>Pilih Judul Cerita</option>
+        <option value="Jaka Tarub">Jaka Tarub</option>
+        <option value="Legenda Danau Toba">Legenda Danau Toba</option>
+        <option value="Legenda Keris Taming Sari">Legenda Keris Taming Sari</option>
+        <option value="Roro Jonggrang">Roro Jonggrang</option>
+        <option value="Talaga Warna">Talaga Warna</option>
+      </select>
+    </div>
+    
+    <!-- Label Bahasa Indonesia (disembunyikan dulu) -->
+    <div style="max-width: 800px; margin: 0 auto; text-align: left;" id="label-indonesia" hidden>
+        <p style="font-size: 18px; font-weight: 600; margin-bottom: 16px;">Bahasa Indonesia</p>
+    </div>
+
+    <!-- Output Cerita Asli -->
+    <div class="output-box" id="output-cerita">
+        Pilih cerita, nanti akan ditampilkan di sini...
+    </div>
+
+    <!-- Label Bahasa Jawa -->
+    <div style="max-width: 800px; margin: 24px auto 0; text-align: left;" id="label-terjemahan" hidden>
+        <p style="font-size: 18px; font-weight: 600; margin-bottom: 16px;">Bahasa Jawa</p>
+    </div>
+
+    <!-- Output Terjemahan -->
+    <div class="output-box" id="output-terjemahan" style="display: none; position: relative;">
+      <div id="teks-terjemahan">
+        Cerita dalam Bahasa Jawa akan muncul di sini...
+      </div>
+    </div>
+  </div>
+
+  <!-- Tombol Aksi -->
+  <div class="btn-group">
+    <button class="translate-btn" id="translate-btn" disabled>Terjemahkan</button>
+    <button class="translate-btn" id="play-audio-btn" style="display: none;">Putar Audio</button>
+    <audio id="audio-player" controls style="display: none; width: 800px; margin-top: 16px;"></audio>
+  </div>
+
+  <!-- Load Script -->
+  <script src="script.js"></script>
+</body>
+</html>
