@@ -1,10 +1,14 @@
 # eas-javala
 
-LINK WEB : https://naufalhumam24.github.io/eas-javala/
+Link Website : https://naufalhumam24.github.io/eas-javala/
+
+---
 
 # Javala — Pelestarian Cerita Rakyat Nusantara melalui Translasi dan TTS Bahasa Jawa
 
 Javala adalah aplikasi web edukatif yang bertujuan melestarikan cerita rakyat Indonesia dengan menerjemahkannya ke dalam Bahasa Jawa dan mengubahnya menjadi suara (Text-to-Speech). Proyek ini menggabungkan *Frontend Web, **Backend NLP, dan **Teknologi TTS Bahasa Jawa*.
+
+---
 
 ## 📌 Fitur Utama
 
@@ -33,7 +37,7 @@ Javala adalah aplikasi web edukatif yang bertujuan melestarikan cerita rakyat In
 
 ## 📁 Struktur Proyek
 
-
+```
 
 eas-javala/
 ├── frontend/
@@ -59,9 +63,9 @@ eas-javala/
 │
 └── README.md
 
+```
+
 ---
-
-
 
 ## 📡 Endpoint API
 
@@ -73,7 +77,7 @@ eas-javala/
 
 Contoh payload:
 
-json
+```json
 POST /translate
 {
   "text": "Pada zaman dahulu ada seekor harimau..."
